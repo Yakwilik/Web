@@ -5,6 +5,7 @@
 .body-header {
     padding: 20px 0;
     background-color: #fff;
+    // @include adaptiveValue("min-height", 50, 150);
     &__container {
         flex-wrap: wrap;
         max-height: 50px;
@@ -12,7 +13,7 @@
         min-height: rem(50);
         // justify-content: center;
         align-items: center;
-        @include adaptiveValue("gap", 60, 20);
+        @include adaptiveValue("gap", 60, 10);
     }
 
     &__logo {
@@ -25,13 +26,16 @@
         flex: 1 1 auto;
         padding-right: rem(15);
         @include adaptiveValue("padding-left", 158, 30);
+        @media (max-width: 830px) {
+            padding-left: 0px;
+        }
     }
 }
 .search-header {
     position: relative;
     &__input {
         flex: 1 1 auto;
-        @include adaptiveValue("width", 370, 100);
+        @include adaptiveValue("width", 370, 50);
         color: #000;
         display: inline-block;
         padding-left: rem(15);
