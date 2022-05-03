@@ -1,0 +1,157 @@
+.header {
+    &__body {
+    }
+}
+.body-header {
+    padding: 20px 0;
+    background-color: #fff;
+    &__container {
+        flex-wrap: wrap;
+        max-height: 50px;
+        display: flex;
+        min-height: rem(50);
+        // justify-content: center;
+        align-items: center;
+        @include adaptiveValue("gap", 60, 20);
+    }
+
+    &__logo {
+        img {
+            max-width: rem(42);
+        }
+    }
+
+    &__search {
+        flex: 1 1 auto;
+        padding-right: rem(15);
+        @include adaptiveValue("padding-left", 158, 30);
+    }
+}
+.search-header {
+    position: relative;
+    &__input {
+        flex: 1 1 auto;
+        @include adaptiveValue("width", 370, 100);
+        color: #000;
+        display: inline-block;
+        padding-left: rem(15);
+        background-color: rgba(7, 7, 7, 0.03);
+        border-radius: rem(30);
+        border: 1px solid rgba(4, 4, 4, 0.5);
+        margin: rem(5);
+        height: rem(41);
+    }
+
+    &__button {
+        border-radius: rem(15);
+        padding: rem(5) rem(5);
+        margin-left: rem(10);
+    }
+}
+.user-header {
+    display: flex;
+    align-items: center;
+
+    &__user {
+        display: inline-block;
+        margin-right: rem(10);
+        max-width: rem(40);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &__name {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+.user-header {
+    &__items {
+    }
+}
+.header-items {
+    justify-content: center;
+    &__item {
+    }
+}
+.item-name {
+    justify-content: center;
+    display: flex;
+    flex: 1 1 100%;
+}
+.header-item {
+    display: flex;
+    flex: 1 1 50%;
+
+    &__settings {
+    }
+
+    &__log-out {
+    }
+}
+.setting-item {
+    padding: rem(10);
+}
+.log-out-item {
+    padding: rem(10);
+}
+
+.menu {
+    &-avatar {
+        display: block;
+        flex: 0 0 40px;
+        height: rem(40);
+    }
+}
+div .line {
+    margin: rem(3) 0 0 0;
+    border: rem(0.5) solid black;
+}
+
+//Burger
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        flex: 0 0 30px;
+        height: rem(18);
+        cursor: pointer;
+        z-index: 5;
+        span,
+        &::before,
+        &::after {
+            content: "";
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: rem(2);
+            background-color: #000;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - rem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before,
+            &::after {
+            }
+            &::before {
+                top: calc(50% - rem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - rem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

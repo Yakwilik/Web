@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.htm',{ "title":"Главная" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <div class="page__container">
+                    <div class="page__articles articles">
+                        <div class="articles__header article-header">
+                            <ul class="article-header__list list">
+                                <li class="list__item">Новые вопросы</li>
+                                <li class="list__item">Популярные вопросы</li>
+                            </ul>
+                        </div>
+                        <div class="articles__content article-content">
+                            <div class="article-content__info article-info">
+                                <div class="article-info__img">
+                                    <a href=""
+                                        ><img
+                                            src="@img/duck.jpeg"
+                                            alt=""
+                                            class="ibg"
+                                    /></a>
+                                </div>
+                                <button class="article-info__likes button">
+                                    лайки:
+                                    <span class="article-info__count">50</span>
+                                </button>
+                            </div>
+                            <div class="article-content__body article-body">
+                                <div class="article-body__head article-head">
+                                    <a href="">Как построить Лунапарк?</a>
+                                </div>
+                                <div
+                                    class="article-body__content article-content"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Ratione, nobis. Lorem
+                                    ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Minima fugit deserunt
+                                    fugiat natus autem ad nisi nulla, similique
+                                    facilis omnis repellat perferendis non in
+                                    ullam officia eos. Vero minus aliquid saepe.
+                                    Autem placeat sunt rerum nam odit magnam
+                                    facere qui!
+                                </div>
+                                <ul class="ariclie-body__footer article-footer">
+                                    <li class="article-footer__answers">
+                                        <a href="">ответы</a>
+                                        <span class="answers-count">3</span>
+                                    </li>
+                                    <li class="article-footer__tags">
+                                        Теги:
+                                        <span class="tags"
+                                            >black-jack bender</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="articles__content article-content">
+                            <div class="article-content__info article-info">
+                                <div class="article-info__img">
+                                    <a href=""
+                                        ><img
+                                            src="@img/duck.jpeg"
+                                            alt=""
+                                            class="ibg"
+                                    /></a>
+                                </div>
+                                <button class="article-info__likes button">
+                                    лайки:
+                                    <span class="article-info__count">50</span>
+                                </button>
+                            </div>
+                            <div class="article-content__body article-body">
+                                <div class="article-body__head article-head">
+                                    <a href="">Как построить Лунапарк?</a>
+                                </div>
+                                <div
+                                    class="article-body__content article-content"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Ratione, nobis. Lorem
+                                    ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Minima fugit deserunt
+                                    fugiat natus autem ad nisi nulla, similique
+                                    facilis omnis repellat perferendis non in
+                                    ullam officia eos. Vero minus aliquid saepe.
+                                    Autem placeat sunt rerum nam odit magnam
+                                    facere qui!
+                                </div>
+                                <ul class="ariclie-body__footer article-footer">
+                                    <li class="article-footer__answers">
+                                        <a href="">ответы</a>
+                                        <span class="answers-count">3</span>
+                                    </li>
+                                    <li class="article-footer__tags">
+                                        Теги:
+                                        <span class="tags"
+                                            >black-jack bender</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="articles__paginator paginator">
+                            <div class="paginator__container">
+                                <span class="paginator__item first-page button"
+                                    ><a href="">1</a></span
+                                >
+                                <span class="paginator__item dots">...</span>
+                                <span
+                                    id="current-page"
+                                    class="paginator__item button"
+                                    ><a href=""></a>
+                                </span>
+                                <span class="paginator__item last-page button"
+                                    ><a href="">52</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__tags tags">
+                        <div class="tags">
+                            <h2>Популярные теги</h2>
+                            <div class="tags__container tags-container-row">
+                                <span>perl</span>
+                                <span>Python</span>
+                                <span>techPark</span>
+                            </div>
+                            <div class="tags__container tags-container-row">
+                                <span>MySQL</span>
+                                <span>Django</span>
+                            </div>
+                            <div class="tags__container tags-container-row">
+                                <span>VK</span>
+                                <span>BMSTU</span>
+                                <span>FireFox</span>
+                            </div>
+                        </div>
+                        <div class="best-members">
+                            <h2>Лучшие пользователи</h2>
+                            <div
+                                class="members__container members-container-row"
+                            >
+                                <span>MeetUpTeam</span>
+                            </div>
+                            <div
+                                class="members__container members-container-row"
+                            >
+                                <span>yakwilik</span>
+                            </div>
+                            <div
+                                class="members__container members-container-row"
+                            >
+                                <span>vkTeam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+    </body>
+</html>
