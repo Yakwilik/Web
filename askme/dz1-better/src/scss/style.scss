@@ -137,6 +137,7 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "new_questions.scss";
+@import "one_question.scss";
 
 .button {
     border: 1px solid rgba(4, 4, 4, 0.5);

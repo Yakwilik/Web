@@ -1,5 +1,6 @@
 //====================================================================================================
 .page {
+    padding-bottom: rem(30);
     margin-top: rem(20);
     &__container {
         flex-wrap: wrap;
@@ -26,8 +27,10 @@
     }
 
     &__paginator {
+        padding-top: rem(5);
         width: 100%;
         text-align: center;
+        margin-bottom: rem(20);
     }
 }
 .article-header {
@@ -44,7 +47,7 @@
     }
 }
 .article-content {
-    align-items: center;
+    align-items: start;
     display: flex;
     flex: 1 1 100%;
     &__info {
@@ -116,7 +119,7 @@
 .article-content {
 }
 .article-body {
-    margin-bottom: rem(40);
+    margin-bottom: rem(20);
     &__footer {
     }
 }
@@ -162,7 +165,6 @@
     }
     &__container {
     }
-    padding-bottom: rem(50);
 }
 .tags-container-row {
     padding: rem(5);
