@@ -749,6 +749,153 @@ div .line {
   border-radius: 1.5625rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.file-input {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.avatar-place {
+  margin-bottom: 0.9375rem;
+  width: 11.25rem;
+  height: 6.25rem;
+}
+
+.input-place {
+  margin-bottom: 0.9375rem;
+  width: 11.25rem;
+}
+
+.settings {
+  margin-top: 1.5625rem;
+  width: 80%;
+}
+
+.settings #output {
+  display: block;
+  border: 1px solid black;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.settings__file-input {
+  background-color: white;
+}
+
+.settings__input {
+  margin-left: 0.625rem;
+  width: 35%;
+  border: 1px solid black;
+  padding: 0.3125rem 1.25rem;
+  border-radius: 3.125rem;
+}
+
+.settings li {
+  font-size: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+
+.settings__login {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__mail {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__nick {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__avatar {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settings__avatar .img {
+  width: 100%;
+}
+
+.settings .w100 {
+  width: 100%;
+}
+
+.login-info {
+  width: 20%;
+}
+
+.mail-info {
+  width: 20%;
+}
+
+.nick-info {
+  width: 20%;
+}
+
+.avatar-info {
+  width: 20%;
+}
+
+.avatar__rows {
+  width: 80%;
+}
+
+.avatar__row {
+  margin: 0 auto;
+}
+
+.file-input {
+  width: 10.625rem;
+  display: block;
+  margin: 0 auto;
+  color: transparent;
+}
+
+.file-input::-webkit-file-upload-button {
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.3125rem 0.4375rem;
+  border-radius: 3.125rem;
+}
+
+.file-input::-webkit-file-upload-button:hover {
+  background-color: rgba(52, 90, 130, 0.6);
+}
+
+.save-button {
+  width: 10.625rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.3125rem 0.4375rem;
+  border: 1px solid black;
+  border-radius: 2.5rem;
+}
+
 .button {
   border: 1px solid rgba(4, 4, 4, 0.5);
 }

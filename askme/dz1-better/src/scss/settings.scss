@@ -1,0 +1,129 @@
+.file-input {
+    flex-wrap: wrap;
+    width: 100%;
+}
+.avatar-place {
+    margin-bottom: rem(15);
+    width: rem(180);
+    height: rem(100);
+}
+.input-place {
+    margin-bottom: rem(15);
+    width: rem(180);
+}
+.settings {
+    #output {
+        display: block;
+        border: 1px solid black;
+        width: rem(100);
+        height: rem(100);
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    &__file-input {
+        background-color: white;
+        // padding: rem(5) rem(20);
+        // border-radius: rem(50);
+    }
+    &__input {
+        margin-left: rem(10);
+        width: 35%;
+        border: 1px solid black;
+        padding: rem(5) rem(20);
+        border-radius: rem(50);
+    }
+    margin-top: rem(25);
+    width: 80%;
+    li {
+        font-size: rem(20);
+        margin-bottom: rem(15);
+    }
+
+    &__login {
+        align-items: center;
+        display: flex;
+    }
+
+    &__mail {
+        align-items: center;
+        display: flex;
+    }
+
+    &__nick {
+        align-items: center;
+        display: flex;
+    }
+
+    &__avatar {
+        .img {
+            width: 100%;
+        }
+        align-items: start;
+        display: flex;
+    }
+    .w100 {
+        width: 100%;
+    }
+}
+.login {
+}
+.w100 {
+}
+.login-info {
+    width: 20%;
+}
+
+.mail {
+}
+.mail-info {
+    width: 20%;
+}
+.nick {
+}
+.nick-info {
+    width: 20%;
+}
+.avatar {
+}
+.avatar-info {
+    width: 20%;
+}
+
+.avatar__rows {
+    width: 80%;
+}
+.avatar__row {
+    margin: 0 auto;
+}
+.file-input {
+    width: rem(170);
+    display: block;
+    margin: 0 auto;
+    color: transparent;
+
+    // text-align: center;
+    // width: rem(250);
+    // border: 1px solid black;
+    // font-size: rem(20);
+    // margin-bottom: rem(15);
+
+    &::-webkit-file-upload-button {
+        border: 1px solid black;
+        background-color: white;
+        padding: rem(5) rem(7);
+        border-radius: rem(50);
+        &:hover {
+            background-color: rgba(52, 90, 130, 0.6);
+        }
+        // display: none;
+    }
+}
+
+.save-button {
+    width: rem(170);
+    text-align: center;
+    margin: 0 auto;
+    padding: rem(5) rem(7);
+    border: 1px solid black;
+    border-radius: rem(40);
+}

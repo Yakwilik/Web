@@ -29,13 +29,17 @@
 						</form>
 					</div>
 					<div class="body-header__user user-header">
+						<a class="user-header__user">
+							<picture><source srcset="img/duck.webp" type="image/webp"><img src="img/duck.jpeg" class="menu-avatar" alt="" /></picture>
+						</a>
 						<div class="user-header__items header-items">
+							<div class="header-items__item item-name">Имя</div>
 							<div class="header-items__item header-item">
 								<div class="header-item__settings setting-item">
-									Войти
+									Настройки
 								</div>
 								<div class="header-item__log-out log-out-item">
-									Зарегистрироваться
+									Выйти
 								</div>
 							</div>
 						</div>
@@ -50,45 +54,50 @@
 
 		<main class="page">
 			<div class="page__container">
-				<div class="page__articles articles">
-					<div class="articles__header article-header">
-						<ul class="article-header__list list">
-							<li class="list__item page-title">
-								Новый вопрос
+				<ul class="settings">
+					<li class="settings__login login w100">
+						<div class="login-info">логин</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__mail mail w100">
+						<div class="mail-info">e-mail</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__nick nick w100">
+						<div class="nick-info">Dr.Pepper</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__avatar avatar w100">
+						<div class="avatar-info">Загрузите аватарку</div>
+						<ul class="avatar__rows">
+							<li class="img avatar__row">
+								<div class="avatar-place">
+									<img id="output" />
+								</div>
+								<div class="input-place">
+									<input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" class="file-input" tytle="выбрать файл" />
+									<script>
+										var loadFile = function(event) {
+											var image =
+												document.getElementById(
+													"output"
+												);
+											image.src = URL.createObjectURL(
+												event.target.files[0]
+											);
+										};
+									</script>
+								</div>
+								<div class="input-place">
+									<div class="button save-button">
+										сохранить
+									</div>
+								</div>
 							</li>
 						</ul>
-					</div>
-					<div class="new-question">
-						<div class="new-question__title question-title">
-							<div class="question-title__description">
-								Заголовок вопроса:
-							</div>
-							<div class="question-title__input">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Как построить Лунапарк?" maxlength="55" />
-							</div>
-						</div>
-						<div class="new-question__text question-text">
-							<div class="question-text__description">
-								Вопрос
-							</div>
-							<div class="question-text__text-area">
-								<textarea name="" id=""></textarea>
-							</div>
-						</div>
-						<div class="new-question__tags question-tags">
-							<div class="question-tags__description">
-								Теги
-							</div>
-							<div class="question-tags__input">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="программирование строительство" maxlength="55" />
-							</div>
-						</div>
-						<div class="new-question__button question-button">
-							<button class="button">Спросить</button>
-						</div>
-					</div>
-				</div>
-				<div class="page__tags tags-new">
+					</li>
+				</ul>
+				<div class="page__tags tags">
 					<div class="tags">
 						<h2>Популярные теги</h2>
 						<div class="tags__container tags-container-row">
