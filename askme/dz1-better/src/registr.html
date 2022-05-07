@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/_head.htm',{ "title":"Настройки" })
+    @@include('html/_head.htm',{ "title":"Вход" })
     <body>
         <div class="wrapper">
-            @@include('html/_header.htm',{})
+            @@include('html/_header_no_log.htm',{})
             <main class="page">
                 <div class="page__container">
                     <ul class="settings">
+                        <li class="w100 log-in">Регистрация</li>
+                        <li class="settings__login login w100">
+                            <div class="login-info"></div>
+                            <div type="text" class="wrong-pas">
+                                Такой адрес e-mail уже зарегистрирован
+                            </div>
+                        </li>
                         <li class="settings__login login w100">
                             <div class="login-info">логин</div>
                             <input type="text" class="settings__input" />
                         </li>
-                        <li class="settings__mail mail w100">
-                            <div class="mail-info">e-mail</div>
+                        <li class="settings__login login w100">
+                            <div class="login-info">e-mail</div>
                             <input type="text" class="settings__input" />
                         </li>
-                        <li class="settings__nick nick w100">
-                            <div class="nick-info">никнейм</div>
+                        <li class="settings__login login w100">
+                            <div class="login-info">никнейм</div>
                             <input type="text" class="settings__input" />
+                        </li>
+                        <li class="settings__mail mail w100">
+                            <div class="mail-info">пароль</div>
+                            <input type="password" class="settings__input" />
+                        </li>
+                        <li class="settings__mail mail w100">
+                            <div class="mail-info">повторите пароль</div>
+                            <input type="password" class="settings__input" />
                         </li>
                         <li class="settings__avatar avatar w100">
-                            <div class="avatar-info">Загрузите аватарку</div>
-                            <ul class="avatar__rows">
+                            <div class="avatar-info w20">
+                                Загрузите аватарку
+                            </div>
+                            <ul class="avatar__rows ml10">
                                 <li class="img avatar__row">
-                                    <div class="avatar-place">
+                                    <div class="mb10">
                                         <img id="output" />
                                     </div>
-                                    <div class="input-place">
+                                    <div class="mb10">
                                         <input
                                             type="file"
                                             accept="image/*"
@@ -48,9 +65,9 @@
                                             };
                                         </script>
                                     </div>
-                                    <div class="input-place">
-                                        <div class="button save-button">
-                                            сохранить
+                                    <div class="">
+                                        <div class="button reg-button">
+                                            зарегистрироваться
                                         </div>
                                     </div>
                                 </li>

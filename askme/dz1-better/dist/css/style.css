@@ -896,6 +896,52 @@ div .line {
   border-radius: 2.5rem;
 }
 
+.login-button {
+  margin-left: 0.625rem;
+  padding: 0.3125rem;
+  border-radius: 3.125rem;
+}
+
+.new-acc {
+  margin-left: 0.625rem;
+  color: blue;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.wrong-pas {
+  color: red;
+  margin-left: 0.625rem;
+  padding: 0.3125rem;
+}
+
+.log-in {
+  font-size: 1.875rem !important;
+}
+
+.ml10 {
+  margin-left: 0.625rem;
+}
+
+.w20 {
+  width: 20%;
+}
+
+.mb10 {
+  margin-bottom: 0.625rem;
+}
+
+.reg-button {
+  width: 15.625rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.3125rem 0.4375rem;
+  border: 1px solid black;
+  border-radius: 2.5rem;
+}
+
 .button {
   border: 1px solid rgba(4, 4, 4, 0.5);
 }
