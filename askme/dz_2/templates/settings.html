@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Настройки</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220507234834" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__body body-header">
+				<div class="body-header__container">
+					<a class="body-header__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" /></picture>
+					</a>
+					<div class="body-header__search">
+						<form class="search-header">
+							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-header__input" />
+							<button type="submit" class="button search-header__button">
+								найти
+							</button>
+						</form>
+					</div>
+					<div class="body-header__user user-header">
+						<a class="user-header__user">
+							<picture><source srcset="img/duck.webp" type="image/webp"><img src="img/duck.jpeg" class="menu-avatar" alt="" /></picture>
+						</a>
+						<div class="user-header__items header-items">
+							<div class="header-items__item item-name">Имя</div>
+							<div class="header-items__item header-item">
+								<div class="header-item__settings setting-item">
+									Настройки
+								</div>
+								<div class="header-item__log-out log-out-item">
+									Выйти
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="icon-menu">
+						<span></span>
+					</button>
+				</div>
+				<div class="line"></div>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="page__container">
+				<ul class="settings">
+					<li class="settings__login login w100">
+						<div class="login-info">логин</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__mail mail w100">
+						<div class="mail-info">e-mail</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__nick nick w100">
+						<div class="nick-info">никнейм</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__avatar avatar w100">
+						<div class="avatar-info">Загрузите аватарку</div>
+						<ul class="avatar__rows">
+							<li class="img avatar__row">
+								<div class="avatar-place">
+									<img id="output" />
+								</div>
+								<div class="input-place">
+									<input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" class="file-input" tytle="выбрать файл" />
+									<script>
+										var loadFile = function(event) {
+											var image =
+												document.getElementById(
+													"output"
+												);
+											image.src = URL.createObjectURL(
+												event.target.files[0]
+											);
+										};
+									</script>
+								</div>
+								<div class="input-place">
+									<div class="button save-button">
+										сохранить
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="page__tags tags">
+					<div class="tags">
+						<h2>Популярные теги</h2>
+						<div class="tags__container tags-container-row">
+							<span>perl</span>
+							<span>Python</span>
+							<span>techPark</span>
+						</div>
+						<div class="tags__container tags-container-row">
+							<span>MySQL</span>
+							<span>Django</span>
+						</div>
+						<div class="tags__container tags-container-row">
+							<span>VK</span>
+							<span>BMSTU</span>
+							<span>FireFox</span>
+						</div>
+					</div>
+					<div class="best-members">
+						<h2>Лучшие пользователи</h2>
+						<div class="members__container members-container-row">
+							<span>MeetUpTeam</span>
+						</div>
+						<div class="members__container members-container-row">
+							<span>yakwilik</span>
+						</div>
+						<div class="members__container members-container-row">
+							<span>vkTeam</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20220507234834"></script>
+</body>
+
+</html>
