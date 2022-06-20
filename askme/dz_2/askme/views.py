@@ -16,11 +16,24 @@ HOT_QUESTIONS = [
     } for i in range(50)
 ]
 
+
+
 first_row = {"1": "C++", "2": "Python", "3": "RUST"}
 second_row = {"1": "C#", "2": "QT", "3": "GoLang"}
 third_row = {"1": "Ruby", "2": "Java", "3": "PascalAbc"}
 
 TAGS = [first_row, second_row, third_row]
+
+tags = [f"tag{i % 2}" for i in range(30)]
+
+QUESTIONS_WITH_TAGS = [
+    {
+        "title": f"Title of hot question number {i}",
+        "text": f"This is my hot question number {i}",
+        "tag": tags[i]
+    } for i in range(30)
+]
+
 
 MEMBERS = ["MeetUpTeam", "yakwilik", "vkTeam"]
 
@@ -40,6 +53,14 @@ def new_question(request):
 def one_question(request, i: int):
     return render(request, "one_question.html", {"questions": QUESTIONS,
                                                  "tags": TAGS, "members": MEMBERS})
+
+
+def one_tag(request, i: str):
+    print(i)
+    for question in QUESTIONS_WITH_TAGS:
+        print(question["tag"])
+    return render(request, "one_tag.html", {"questions": QUESTIONS_WITH_TAGS,
+                                                 "tags": TAGS, "members": MEMBERS, "tag": i})
 
 
 def registration(request):

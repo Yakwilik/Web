@@ -1,7 +1,7 @@
 {% load static %}
 
 
-<a href="#"><span>{{ tag.1 }}</span></a>
-<a href="#"><span>{{ tag.2 }}</span></a>
-<a href="#"><span>{{ tag.3 }}</span></a>
+<a href="{% url "one_tag" "tag1" %}"><span>{{ tag.1 }}</span></a>
+<a href="{% url "one_tag" "tag0" %}"><span>{{ tag.2 }}</span></a>
+<a href="{% url "one_tag" "tag1" %}"><span>{{ tag.3 }}</span></a>
 

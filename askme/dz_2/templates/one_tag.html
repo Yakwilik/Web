@@ -1,7 +1,7 @@
 {% extends "inc/base.html" %}
 
 {% block title %}
-    Популярные вопросы
+    Вопросы по тегу
 {% endblock title %}
 
 {% block link %}
@@ -15,7 +15,9 @@
 
 {% block content %}
                 {% for question in questions %}
-                    {% include "inc/question.html" %}
+                    {% if tag == question.tag %}
+                        {% include "inc/question.html" %}
+                    {% endif %}
                 {% endfor %}
                 {% include "inc/paginator.html" %}
 {% endblock content %}
