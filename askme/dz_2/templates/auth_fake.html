@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Новый вопрос</title>
+	<title>Вход</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -50,45 +50,34 @@
 
 		<main class="page">
 			<div class="page__container">
-				<div class="page__articles articles">
-					<div class="articles__header article-header">
-						<ul class="article-header__list list">
-							<li class="list__item page-title">
-								Новый вопрос
-							</li>
-						</ul>
-					</div>
-					<div class="new-question">
-						<div class="new-question__title question-title">
-							<div class="question-title__description">
-								Заголовок вопроса:
-							</div>
-							<div class="question-title__input">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Как построить Лунапарк?" maxlength="55" />
-							</div>
+				<ul class="settings">
+					<li class="w100 log-in">Вход</li>
+					<li class="settings__login login w100">
+						<div class="login-info"></div>
+						<div type="text" class="wrong-pas">
+							Пароль введен неверно
 						</div>
-						<div class="new-question__text question-text">
-							<div class="question-text__description">
-								Вопрос
-							</div>
-							<div class="question-text__text-area">
-								<textarea name="" id=""></textarea>
-							</div>
-						</div>
-						<div class="new-question__tags question-tags">
-							<div class="question-tags__description">
-								Теги
-							</div>
-							<div class="question-tags__input">
-								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="программирование строительство" maxlength="55" />
-							</div>
-						</div>
-						<div class="new-question__button question-button">
-							<button class="button">Спросить</button>
-						</div>
-					</div>
-				</div>
-				<div class="page__tags tags-new">
+					</li>
+					<li class="settings__login login w100">
+						<div class="login-info">логин</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__mail mail w100">
+						<div class="mail-info">пароль</div>
+						<input type="password" class="settings__input" />
+					</li>
+					<li class="settings__nick nick w100">
+						<div class="mail-info"></div>
+						<button class="button login-button">войти</button>
+					</li>
+					<li class="settings__nick nick w100">
+						<div class="mail-info"></div>
+						<a href="" class="new-acc underline">
+							<span clas="">создать новый аккаунт</span>
+						</a>
+					</li>
+				</ul>
+				<div class="page__tags tags">
 					<div class="tags">
 						<h2>Популярные теги</h2>
 						<div class="tags__container tags-container-row">

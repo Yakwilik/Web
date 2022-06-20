@@ -1,0 +1,8 @@
+<div class="articles__header article-header">
+    <ul class="article-header__list list">
+        {% block link %}
+        {% endblock link %}
+        <a href="{% url  "greet" %}"><li class="list__item">Задать новый вопрос</li></a>
+    </ul>
+    <div class="line"></div>
+</div>

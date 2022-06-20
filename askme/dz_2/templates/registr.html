@@ -1,56 +1,16 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends "inc/base.html" %}
 
-<head>
-	<title>Вход</title>
-	<meta charset="UTF-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220507234834" />
-	<link rel="shortcut icon" href="favicon.ico" />
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+{% block title %}
+Регистрация
+{% endblock title %}
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__body body-header">
-				<div class="body-header__container">
-					<a class="body-header__logo">
-						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" /></picture>
-					</a>
-					<div class="body-header__search">
-						<form class="search-header">
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-header__input" />
-							<button type="submit" class="button search-header__button">
-								найти
-							</button>
-						</form>
-					</div>
-					<div class="body-header__user user-header">
-						<div class="user-header__items header-items">
-							<div class="header-items__item header-item">
-								<div class="header-item__settings setting-item">
-									Войти
-								</div>
-								<div class="header-item__log-out log-out-item">
-									Зарегистрироваться
-								</div>
-							</div>
-						</div>
-					</div>
-					<button type="button" class="icon-menu">
-						<span></span>
-					</button>
-				</div>
-				<div class="line"></div>
-			</div>
-		</header>
+ {% block user %}
+{#     TODO: нужно проверять авторизацию#}
+    {% include "inc/not_logged.html" %}
+ {% endblock user %}
 
-		<main class="page">
-			<div class="page__container">
-				<ul class="settings">
+{% block content %}
+<ul class="settings">
 					<li class="w100 log-in">Регистрация</li>
 					<li class="settings__login login w100">
 						<div class="login-info"></div>
@@ -110,55 +70,12 @@
 						</ul>
 					</li>
 				</ul>
-				<div class="page__tags tags">
-					<div class="tags">
-						<h2>Популярные теги</h2>
-						<div class="tags__container tags-container-row">
-							<span>perl</span>
-							<span>Python</span>
-							<span>techPark</span>
-						</div>
-						<div class="tags__container tags-container-row">
-							<span>MySQL</span>
-							<span>Django</span>
-						</div>
-						<div class="tags__container tags-container-row">
-							<span>VK</span>
-							<span>BMSTU</span>
-							<span>FireFox</span>
-						</div>
-					</div>
-					<div class="best-members">
-						<h2>Лучшие пользователи</h2>
-						<div class="members__container members-container-row">
-							<span>MeetUpTeam</span>
-						</div>
-						<div class="members__container members-container-row">
-							<span>yakwilik</span>
-						</div>
-						<div class="members__container members-container-row">
-							<span>vkTeam</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-			</div>
-		</footer>
-	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
-	<script src="js/app.min.js?_v=20220507234834"></script>
-</body>
+{% endblock content %}
 
-</html>
+{% block tags %}
+    {% include "inc/tags.html"%}
+{% endblock tags %}
+
+{% block members %}
+  {% include "inc/members.html" %}
+{% endblock members %}

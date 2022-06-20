@@ -1,0 +1,8 @@
+<div class="best-members">
+    <h2>Лучшие пользователи</h2>
+        {% for member in members %}
+            <div class="members__container members-container-row">
+                    <a href="#"><span>{{ member }}</span></a>
+            </div>
+        {% endfor %}
+</div>

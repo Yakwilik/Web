@@ -15,7 +15,7 @@
     </div>
     <div class="article-content__body article-body">
         <div class="article-body__head article-head">
-            <a href="">{{ question.title }}</a>
+            <a href="{% url "one_question" 0 %}">{{ question.title }}</a>
         </div>
         <div class="article-body__content article-content">
             {{ question.text }}
