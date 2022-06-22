@@ -1,0 +1,34 @@
+{% load static %}
+<div class="articles__content article-content">
+    <div class="article-content__info article-info">
+        <div class="article-info__img">
+            <a href="">
+                <picture>
+                    <source srcset="{% static "img/duck.webp" %}" type="image/webp">
+                    <img src="{% static "img/duck.jpeg" %}" alt="" class="ibg"/></picture>
+            </a>
+        </div>
+        <button class="article-info__likes button">
+            лайки:
+            <span class="article-info__count">50</span>
+        </button>
+    </div>
+    <div class="article-content__body article-body">
+        <div class="article-body__head article-head">
+            <a href="{% url "one_question" 0 %}">{{ question.title }}</a>
+        </div>
+        <div class="article-body__content article-content">
+            {{ question.text }}
+        </div>
+        <ul class="ariclie-body__footer article-footer">
+            <li class="article-footer__answers">
+                <a href="">ответы</a>
+                <span class="answers-count">3</span>
+            </li>
+            <li class="article-footer__tags">
+                Теги:
+                <span class="tags">black-jack bender</span>
+            </li>
+        </ul>
+    </div>
+</div>

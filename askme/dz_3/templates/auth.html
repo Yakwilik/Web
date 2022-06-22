@@ -1,0 +1,48 @@
+{% extends "inc/base.html" %}
+
+{% block title %}
+Регистрация
+{% endblock title %}
+
+ {% block user %}
+{#     TODO: нужно проверять авторизацию#}
+    {% include "inc/not_logged.html" %}
+ {% endblock user %}
+
+{% block content %}
+    <ul class="settings">
+        <li class="w100 log-in">Вход</li>
+        <li class="settings__login login w100">
+            <div class="login-info"></div>
+            <div type="text" class="wrong-pas">
+                Пароль введен неверно
+            </div>
+        </li>
+        <li class="settings__login login w100">
+            <div class="login-info">логин</div>
+            <input type="text" class="settings__input" />
+        </li>
+        <li class="settings__mail mail w100">
+            <div class="mail-info">пароль</div>
+            <input type="password" class="settings__input" />
+        </li>
+        <li class="settings__nick nick w100">
+            <div class="mail-info"></div>
+            <button class="button login-button">войти</button>
+        </li>
+        <li class="settings__nick nick w100">
+            <div class="mail-info"></div>
+            <a href="{% url "registration" %}" class="new-acc underline">
+                <span clas="">создать новый аккаунт</span>
+            </a>
+        </li>
+    </ul>
+{% endblock content %}
+
+{% block tags %}
+    {% include "inc/tags.html"%}
+{% endblock tags %}
+
+{% block members %}
+  {% include "inc/members.html" %}
+{% endblock members %}

@@ -1,0 +1,81 @@
+{% extends "inc/base.html" %}
+
+{% block title %}
+Регистрация
+{% endblock title %}
+
+ {% block user %}
+{#     TODO: нужно проверять авторизацию#}
+    {% include "inc/not_logged.html" %}
+ {% endblock user %}
+
+{% block content %}
+<ul class="settings">
+					<li class="w100 log-in">Регистрация</li>
+					<li class="settings__login login w100">
+						<div class="login-info"></div>
+						<div type="text" class="wrong-pas">
+							Такой адрес e-mail уже зарегистрирован
+						</div>
+					</li>
+					<li class="settings__login login w100">
+						<div class="login-info">логин</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__login login w100">
+						<div class="login-info">e-mail</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__login login w100">
+						<div class="login-info">никнейм</div>
+						<input type="text" class="settings__input" />
+					</li>
+					<li class="settings__mail mail w100">
+						<div class="mail-info">пароль</div>
+						<input type="password" class="settings__input" />
+					</li>
+					<li class="settings__mail mail w100">
+						<div class="mail-info">повторите пароль</div>
+						<input type="password" class="settings__input" />
+					</li>
+					<li class="settings__avatar avatar w100">
+						<div class="avatar-info w20">
+							Загрузите аватарку
+						</div>
+						<ul class="avatar__rows ml10">
+							<li class="img avatar__row">
+								<div class="mb10">
+									<img id="output" />
+								</div>
+								<div class="mb10">
+									<input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" class="file-input" tytle="выбрать файл" />
+									<script>
+										var loadFile = function(event) {
+											var image =
+												document.getElementById(
+													"output"
+												);
+											image.src = URL.createObjectURL(
+												event.target.files[0]
+											);
+										};
+									</script>
+								</div>
+								<div class="">
+									<div class="button reg-button">
+										зарегистрироваться
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+{% endblock content %}
+
+{% block tags %}
+    {% include "inc/tags.html"%}
+{% endblock tags %}
+
+{% block members %}
+  {% include "inc/members.html" %}
+{% endblock members %}

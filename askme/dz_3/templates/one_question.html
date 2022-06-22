@@ -1,0 +1,210 @@
+{% extends "inc/base.html" %}
+
+ {% block user %}
+{#     TODO: нужно проверять авторизацию#}
+    {% include "inc/user_logged.html" %}
+ {% endblock user %}
+
+{% block content %}
+    <div class="page__articles articles">
+					<div class="articles__content article-content">
+						<div class="article-content__info article-info">
+							<div class="article-info__img">
+								{% include "inc/picture.html" %}
+							</div>
+							<button class="article-info__likes button">
+								лайки:
+								<span class="article-info__count">50</span>
+							</button>
+						</div>
+						<div class="article-content__body article-body">
+							<div class="article-body__head article-head">
+								<a href="">Как построить Лунапарк?</a>
+							</div>
+							<div class="article-body__content article-content">
+                                {% block questiontext %}
+                                {% endblock questiontext %}
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ratione, nobis. Lorem
+								ipsum dolor sit amet, consectetur
+								adipisicing elit. Minima fugit deserunt
+								fugiat natus autem ad nisi nulla, similique
+								facilis omnis repellat perferendis non in
+								ullam officia eos. Vero minus aliquid saepe.
+								Autem placeat sunt rerum nam odit magnam
+								facere qui! Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit. Nihil enim
+								vero excepturi nisi nam consectetur dolorem
+								aspernatur iusto, voluptatum est molestiae
+								saepe consequatur doloremque quod molestias
+								veniam. Delectus quam ut expedita atque
+								dolores ullam qui harum! Eum debitis iste
+								doloremque quo? Dicta eum minus sequi earum
+								aut, cupiditate a omnis. Lorem ipsum dolor
+								sit amet consectetur adipisicing elit.
+								Ratione, nobis. Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit. Minima fugit
+								deserunt fugiat natus autem ad nisi nulla,
+								similique facilis omnis repellat perferendis
+								non in ullam officia eos. Vero minus aliquid
+								saepe. Autem placeat sunt rerum nam odit
+								magnam facere qui! Lorem ipsum dolor sit
+								amet, consectetur adipisicing elit. Nihil
+								enim vero excepturi nisi nam consectetur
+								dolorem aspernatur iusto, voluptatum est
+								molestiae saepe consequatur doloremque quod
+								molestias veniam. Delectus quam ut expedita
+								atque dolores ullam qui harum! Eum debitis
+								iste doloremque quo? Dicta eum minus sequi
+								earum aut, cupiditate a omnis. Lorem ipsum
+								dolor sit amet consectetur adipisicing elit.
+								Ratione, nobis. Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit. Minima fugit
+								deserunt fugiat natus autem ad nisi nulla,
+								similique facilis omnis repellat perferendis
+								non in ullam officia eos. Vero minus aliquid
+								saepe. Autem placeat sunt rerum nam odit
+								magnam facere qui! Lorem ipsum dolor sit
+								amet, consectetur adipisicing elit. Nihil
+								enim vero excepturi nisi nam consectetur
+								dolorem aspernatur iusto, voluptatum est
+								molestiae saepe consequatur doloremque quod
+								molestias veniam. Delectus quam ut expedita
+								atque dolores ullam qui harum! Eum debitis
+								iste doloremque quo? Dicta eum minus sequi
+								earum aut, cupiditate a omnis.
+							</div>
+							<ul class="ariclie-body__footer article-footer">
+								<li class="article-footer__answers">
+									<a href="">ответы</a>
+									<span class="answers-count">3</span>
+								</li>
+								<li class="article-footer__tags">
+									Теги:
+									<span class="tags">black-jack bender</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="answer-article">
+						<ul class="answers-list">
+							<li class="answer">
+								<div class="answer-article__info answer-info">
+									<div class="answer-info__img">
+										{% include "inc/picture.html" %}
+									</div>
+									<button class="answer-info__likes button">
+										лайки:
+										<span class="answer-info__count">50</span>
+									</button>
+								</div>
+								<div class="answer-article__body answer-body">
+									<div class="answer-body__text">
+                                        {% block answertext1 %}
+                                        {% endblock answertext1%}
+										Lorem, ipsum dolor sit amet
+										consectetur adipisicing elit.
+										Eveniet similique odit accusamus?
+										Quaerat molestiae adipisci eligendi
+										corrupti inventore, officia nesciunt
+										itaque asperiores deserunt, sunt
+										harum laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error.
+									</div>
+								</div>
+							</li>
+							<li class="answer">
+								<div class="answer-article__info answer-info">
+									<div class="answer-info__img">
+                                        {% include "inc/picture.html" %}
+									</div>
+									<button class="answer-info__likes button">
+										лайки:
+										<span class="answer-info__count">50</span>
+									</button>
+								</div>
+								<div class="answer-article__body answer-body">
+									<div class="answer-body__text">
+                                        {% block answertext %}
+                                        {% endblock answertext %}
+										Lorem, ipsum dolor sit amet
+										consectetur adipisicing elit.
+										Eveniet similique odit accusamus?
+										Quaerat molestiae adipisci eligendi
+										corrupti inventore, officia nesciunt
+										itaque asperiores deserunt, sunt
+										harum laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error. Lorem, ipsum
+										dolor sit amet consectetur
+										adipisicing elit. Eveniet similique
+										odit accusamus? Quaerat molestiae
+										adipisci eligendi corrupti
+										inventore, officia nesciunt itaque
+										asperiores deserunt, sunt harum
+										laudantium repellat obcaecati
+										praesentium error.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					{% include "inc/paginator.html" %}
+					<div class="line"></div>
+					<div class="new-answer">
+						<textarea class="new-answer__textarea"></textarea>
+						<button class="new-answer__button button">
+							Ответить
+						</button>
+					</div>
+				</div>
+
+{% endblock content %}
+
+{% block tags %}
+    {% include "inc/tags.html"%}
+{% endblock tags %}
+
+{% block members %}
+  {% include "inc/members.html" %}
+{% endblock members %}

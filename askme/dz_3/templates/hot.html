@@ -1,0 +1,29 @@
+{% extends "inc/base.html" %}
+
+{% block title %}
+    Популярные вопросы
+{% endblock title %}
+
+{% block link %}
+    <a href="{% url  "index" %}"><li class="list__item">Новые вопросы</li></a>
+{% endblock link %}
+
+ {% block user %}
+{#     TODO: нужно проверять авторизацию#}
+    {% include "inc/user_logged.html" %}
+ {% endblock user %}
+
+{% block content %}
+                {% for question in questions %}
+                    {% include "inc/question.html" %}
+                {% endfor %}
+                {% include "inc/paginator.html" %}
+{% endblock content %}
+
+{% block tags %}
+    {% include "inc/tags.html"%}
+{% endblock tags %}
+
+{% block members %}
+  {% include "inc/members.html" %}
+{% endblock members %}

@@ -1,0 +1,32 @@
+{% if questions.has_other_pages %}
+
+    <div class="articles__paginator paginator">
+        <div class="paginator__container">
+            {% if questions.has_previous %}
+                <span class="paginator__item first-page button"><a href="?page={{ questions.previous_page_number }}" questions.previous_page_number %}">Предыдущая страница</a></span>
+            {% else %}
+            {% endif%}
+
+            {% for p in questions.paginator.page_range %}
+
+                {% if p == questions.number %}
+{#                    <span class="paginator__item last-page button"><a href="?page={{ p }}">{{ p }}</a></span>#}
+                {% elif p >= questions.number|add:-2 and p <= questions.number|add:2 %}
+                    <span class="paginator__item last-page button"><a href="?page={{ p }}">{{ p }}</a></span>
+                {% endif %}
+
+            {% endfor %}
+
+            {% if questions.has_next %}
+                <span class="paginator__item first-page button"><a href="?page={{ questions.next_page_number }}" questions.previous_page_number %}">Следующая страница</a></span>
+            {% else %}
+            {% endif%}
+
+        </div>
+    </div>
+
+
+{% endif %}
+
+
+
