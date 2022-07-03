@@ -1,0 +1,6 @@
+
+{% if request.user.is_authenticated %}
+    {% include "inc/user_logged.html" %}
+{% else %}
+    {% include "inc/not_logged.html" %}
+{% endif %}

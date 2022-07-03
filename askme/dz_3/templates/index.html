@@ -1,20 +1,9 @@
 {% extends "inc/base.html" %}
 
-{% block title %}
-    Главная
-{% endblock title %}
 
- {% block user %}
-{#     TODO: нужно проверять авторизацию#}
-    {% include "inc/not_logged.html" %}
- {% endblock user %}
 
-{% block link %}
-    <a href="{% url  "hot" %}"><li class="list__item">Популярные вопросы</li></a>
-{% endblock link %}
 
 {% block content %}
-{#                {% include "inc/articles_page_links.html" %}#}
                 {% for question in questions %}
                     {% include "inc/question.html" %}
                 {% endfor %}

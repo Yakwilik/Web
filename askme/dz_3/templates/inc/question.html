@@ -4,30 +4,40 @@
         <div class="article-info__img">
             <a href="">
                 <picture>
-                    <source srcset="{% static "img/duck.webp" %}" type="image/webp">
-                    <img src="{% static "img/duck.jpeg" %}" alt="" class="ibg"/></picture>
+{#                    <source srcset="{{ question.author.avatar.url }}" type="image/webp">#}
+                    <img src="{{ question.author.avatar.url }}" alt="" class="ibg"/></picture>
             </a>
         </div>
-        <button class="article-info__likes button">
-            лайки:
-            <span class="article-info__count">50</span>
-        </button>
+        <div class="options-container">
+            <form class="option-item">
+            {% csrf_token %}
+            <button name="{{ question.id }}" data-id="{{ question.id }}"><img class="option-button"  title="{{ question.likes }}" src="{% static "img/like.png" %}"/>  </button>
+            </form>
+            <form class="option-item">
+            {% csrf_token %}
+            <button name="{{ question.id }}" data-id="{{ question.id }}"><img class="option-button" title="{{ question.dislikes }}" src="{% static "img/dislike.png" %}"/>  </button>
+            </form>
+        </div>
     </div>
     <div class="article-content__body article-body">
         <div class="article-body__head article-head">
-            <a href="{% url "one_question" 0 %}">{{ question.title }}</a>
+            <a href="{% url "one_question" question_id=question.id %}">{{ question.title }}</a>
         </div>
         <div class="article-body__content article-content">
             {{ question.text }}
         </div>
         <ul class="ariclie-body__footer article-footer">
             <li class="article-footer__answers">
-                <a href="">ответы</a>
-                <span class="answers-count">3</span>
+               <span>ответы:&nbsp{{question.answers}}
+            </span>
             </li>
             <li class="article-footer__tags">
                 Теги:
-                <span class="tags">black-jack bender</span>
+                <span class="tags">
+                    {% for tag in tags %}
+                        <a href="{% url "one_tag" i=tag %}">{{ tag }}</a>&nbsp;
+                    {% endfor %}
+                </span>
             </li>
         </ul>
     </div>

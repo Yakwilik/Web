@@ -1,7 +1,4 @@
 {% load static %}
 
 
-<a href="{% url "one_tag" "tag1" %}"><span>{{ tag.1 }}</span></a>
-<a href="{% url "one_tag" "tag0" %}"><span>{{ tag.2 }}</span></a>
-<a href="{% url "one_tag" "tag1" %}"><span>{{ tag.3 }}</span></a>
-
+<div class="tag-list__item"><a href="{% url "one_tag" "tag1" %}">{{ tag }}</a></div>

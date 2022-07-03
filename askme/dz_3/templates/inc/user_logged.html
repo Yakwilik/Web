@@ -1,11 +1,19 @@
+{% load static %}
+<a class="user-header__user">
+                        <picture>
+                            <source srcset="{% static "img/duck.webp" %}" type="image/webp">
+                            <img src="{% static "img/../../media/default_acc.jpg" %}" class="menu-avatar" alt=""/></picture>
+                    </a>
 <div class="user-header__items header-items">
-    <div class="header-items__item item-name"><a href="#">Имя</a></div>
+
+
+    <div class="header-items__item item-name"><a href="#">{{ request.user }}</a></div>
     <div class="header-items__item header-item">
         <div class="header-item__settings setting-item">
             <a href="#">Настройки</a>
         </div>
         <div class="header-item__log-out log-out-item">
-            <a href="#">Выйти</a>
+            <a href="/admin/logout/">Выйти</a>
         </div>
     </div>
 </div>

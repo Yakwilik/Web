@@ -5,10 +5,10 @@ from askme import views
 urlpatterns = [
     path('', views.index, name="index"),
     path('new/', views.new_question, name="greet"),
-    path('one_question/<int:i>', views.one_question, name="one_question"),
+    path('one_question/<int:question_id>', views.one_question, name="one_question"),
     path('tags/<str:i>', views.one_tag, name="one_tag"),
     path('registration/', views.registration, name="registration"),
-    path('hot_question/', views.hot_question, name="hot"),
+    path('hot_questions/', views.hot_questions, name="hot"),
     path('auth/', views.authentication, name="authentication")
 
     # path('ask/', views.ask, name="ask"),

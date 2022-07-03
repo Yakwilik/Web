@@ -1,0 +1,27 @@
+{% load static %}
+<header class="header">
+        <div class="header__body body-header">
+            <div class="body-header__container">
+                <a href="{% url "index" %}" class="body-header__logo">
+                    <picture>
+                        <source srcset="{% static "img/logo.webp" %}" type="image/webp">
+                        <img src="{% static "img/logo.webp" %}" alt=""/></picture>
+                </a>
+                <div class="body-header__search">
+                    <form class="search-header">
+                        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                               class="search-header__input"/>
+                        <button type="submit" class="button search-header__button">
+                            найти
+                        </button>
+                    </form>
+                </div>
+                {% block user %}
+                <div class="body-header__user user-header">
+                          {% include "inc/navbar_options.html" %}
+                </div>
+                {% endblock user %}
+            </div>
+            <div class="line"></div>
+        </div>
+    </header>

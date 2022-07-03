@@ -2,67 +2,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <title>
-        {% block title %}
-        {% endblock title %}
-    </title>
-    <meta charset="UTF-8"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <!-- <style>body{opacity: 0;}</style> -->
-    <link rel="stylesheet" href="{% static "css/style.min.css" %}"/>
-    <link rel="shortcut icon" href="{% static "favicon.ico" %}"/>
-    <!-- <meta name="robots" content="noindex, nofollow"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
+{% include "inc/head.html" %}
+
 
 <body>
 <div class="wrapper">
-    <header class="header">
-        <div class="header__body body-header">
-            <div class="body-header__container">
-                <a href="{% url "index" %}" class="body-header__logo">
-                    <picture>
-                        <source srcset="{% static "img/logo.webp" %}" type="image/webp">
-                        <img src="{% static "img/logo.webp" %}" alt=""/></picture>
-                </a>
-                <div class="body-header__search">
-                    <form class="search-header">
-                        <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
-                               class="search-header__input"/>
-                        <button type="submit" class="button search-header__button">
-                            найти
-                        </button>
-                    </form>
-                </div>
-                <div class="body-header__user user-header">
-                    <a class="user-header__user">
-                        <picture>
-                            <source srcset="{% static "img/duck.webp" %}" type="image/webp">
-                            <img src="{% static "img/duck.jpeg" %}" class="menu-avatar" alt=""/></picture>
-                    </a>
-                    {% block user %}
-                    {% endblock user %}
-                </div>
-                <button type="button" class="icon-menu">
-                    <span></span>
-                </button>
-            </div>
-            <div class="line"></div>
-        </div>
-    </header>
+    {% include "inc/header.html" %}
 
     <main class="page">
         <div class="page__container">
         <div class="page__articles articles">
             <div class="articles__header article-header">
                 <ul class="article-header__list list">
-                    {% block link %}
-                    {% endblock link %}
+                     <a href="{% if redirect %}{% url  "index" %}"><li class="list__item">
+                        {% else %}
+                            {% url  "hot" %}"><li class="list__item">
+                        {% endif %}
+                         {% block link %}{{link_category}}{% endblock link %}
+                     </li></a>
+
                     <a href="{% url  "greet" %}"><li class="list__item">Задать новый вопрос</li></a>
                 </ul>
                 <div class="line"></div>
             </div>
+                <ul><li class="list__item margin10">
+                      {% block category %}{{ category }}{% endblock category %}
+                </li> </ul>
+
 
             {% block content %}
             {% endblock content %}

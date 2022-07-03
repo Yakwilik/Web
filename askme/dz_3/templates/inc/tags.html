@@ -1,8 +1,8 @@
 <div class="tags">
-                    <h2>Популярные теги</h2>
-                    {% for tag in tags  %}
-                        <div class="tags__container tags-container-row">
-                            {% include "inc/tag.html" %}
-                        </div>
-                    {% endfor %}
+    <h2>Популярные теги</h2>
+    <div class="tags__container tags-container-row">
+    {% for tag in tags  %}
+            {% include "inc/tag.html" %}
+    {% endfor %}
+  </div>
 </div>
